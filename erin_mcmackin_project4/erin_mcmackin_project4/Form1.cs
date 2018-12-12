@@ -17,6 +17,8 @@ namespace erin_mcmackin_project4
             InitializeComponent();
         }
 
+        private SemesterSet newSemester = null;
+
         private void coursesBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
@@ -30,6 +32,24 @@ namespace erin_mcmackin_project4
             // TODO: This line of code loads data into the 'class_DBDataSet.Courses' table. You can move, or remove it, as needed.
             this.coursesTableAdapter.Fill(this.class_DBDataSet.Courses);
 
+        }
+
+        // Create a new new SemesterSet object
+        private void btnSet_Click(object sender, EventArgs e)
+        {
+            //newSemester = new SemesterSet(Convert.ToInt32(txtNumOfCoursesIn.Text), txtNameIn.Text, Convert.ToDateTime(calStartDateIn.Text), courseNumComboBox.Text, groupBox1.Text);
+            // MessageBox.Show(txtNameIn.Text);
+            SemesterSet.setSemester(Convert.ToInt32(txtNumOfCoursesIn.Text), txtNameIn.Text, Convert.ToDateTime(calStartDateIn.Text), courseNumComboBox.Text, groupBox1.Text);
+        }
+
+        private void btnGet_Click(object sender, EventArgs e)
+        {
+            //private string txtNumOfCoursesOutNew = SemesterGet.setGetOutputs();
+            txtNumOfCoursesOut.Text = Convert.ToString(SemesterGet.GetNumOfCourses);
+            txtNameOut.Text = SemesterGet.GetName;
+            txtStartDateOut.Text = Convert.ToString(SemesterGet.GetStartDate);
+            txtCourseNumOut.Text = SemesterGet.GetCourseNum;
+            txtFormatOut.Text = SemesterGet.GetClassFormat;
         }
     }
 }

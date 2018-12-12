@@ -78,9 +78,18 @@
             this.coursesBindingNavigator.SuspendLayout();
             this.SuspendLayout();
             // 
+            // courseNumLabel
+            // 
+            courseNumLabel.AutoSize = true;
+            courseNumLabel.Location = new System.Drawing.Point(104, 493);
+            courseNumLabel.Name = "courseNumLabel";
+            courseNumLabel.Size = new System.Drawing.Size(213, 32);
+            courseNumLabel.TabIndex = 22;
+            courseNumLabel.Text = "Course Number";
+            // 
             // txtNumOfCoursesIn
             // 
-            this.txtNumOfCoursesIn.Location = new System.Drawing.Point(466, 70);
+            this.txtNumOfCoursesIn.Location = new System.Drawing.Point(466, 168);
             this.txtNumOfCoursesIn.Name = "txtNumOfCoursesIn";
             this.txtNumOfCoursesIn.Size = new System.Drawing.Size(366, 38);
             this.txtNumOfCoursesIn.TabIndex = 0;
@@ -88,7 +97,7 @@
             // 
             // txtNameIn
             // 
-            this.txtNameIn.Location = new System.Drawing.Point(466, 170);
+            this.txtNameIn.Location = new System.Drawing.Point(466, 268);
             this.txtNameIn.Name = "txtNameIn";
             this.txtNameIn.Size = new System.Drawing.Size(366, 38);
             this.txtNameIn.TabIndex = 1;
@@ -96,7 +105,7 @@
             // 
             // calStartDateIn
             // 
-            this.calStartDateIn.Location = new System.Drawing.Point(333, 280);
+            this.calStartDateIn.Location = new System.Drawing.Point(333, 378);
             this.calStartDateIn.Name = "calStartDateIn";
             this.calStartDateIn.Size = new System.Drawing.Size(499, 38);
             this.calStartDateIn.TabIndex = 2;
@@ -106,7 +115,7 @@
             // 
             this.groupBox1.Controls.Add(this.radioOnline);
             this.groupBox1.Controls.Add(this.radioHybrid);
-            this.groupBox1.Location = new System.Drawing.Point(95, 488);
+            this.groupBox1.Location = new System.Drawing.Point(95, 586);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(737, 118);
             this.groupBox1.TabIndex = 4;
@@ -130,13 +139,13 @@
             this.radioHybrid.Name = "radioHybrid";
             this.radioHybrid.Size = new System.Drawing.Size(134, 36);
             this.radioHybrid.TabIndex = 0;
-            this.radioHybrid.Text = "Hyprid";
+            this.radioHybrid.Text = "Hybrid";
             this.radioHybrid.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(104, 76);
+            this.label1.Location = new System.Drawing.Point(104, 174);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(258, 32);
             this.label1.TabIndex = 5;
@@ -146,7 +155,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(104, 176);
+            this.label2.Location = new System.Drawing.Point(104, 274);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 32);
             this.label2.TabIndex = 6;
@@ -156,7 +165,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(104, 280);
+            this.label3.Location = new System.Drawing.Point(104, 378);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(142, 32);
             this.label3.TabIndex = 7;
@@ -165,27 +174,29 @@
             // 
             // btnSet
             // 
-            this.btnSet.Location = new System.Drawing.Point(173, 642);
+            this.btnSet.Location = new System.Drawing.Point(173, 740);
             this.btnSet.Name = "btnSet";
             this.btnSet.Size = new System.Drawing.Size(271, 86);
             this.btnSet.TabIndex = 9;
             this.btnSet.TabStop = false;
             this.btnSet.Text = "Set";
             this.btnSet.UseVisualStyleBackColor = true;
+            this.btnSet.Click += new System.EventHandler(this.btnSet_Click);
             // 
             // btnGet
             // 
-            this.btnGet.Location = new System.Drawing.Point(506, 642);
+            this.btnGet.Location = new System.Drawing.Point(506, 740);
             this.btnGet.Name = "btnGet";
             this.btnGet.Size = new System.Drawing.Size(271, 86);
             this.btnGet.TabIndex = 10;
             this.btnGet.TabStop = false;
             this.btnGet.Text = "Get";
             this.btnGet.UseVisualStyleBackColor = true;
+            this.btnGet.Click += new System.EventHandler(this.btnGet_Click);
             // 
             // txtNumOfCoursesOut
             // 
-            this.txtNumOfCoursesOut.Location = new System.Drawing.Point(466, 789);
+            this.txtNumOfCoursesOut.Location = new System.Drawing.Point(466, 887);
             this.txtNumOfCoursesOut.Name = "txtNumOfCoursesOut";
             this.txtNumOfCoursesOut.ReadOnly = true;
             this.txtNumOfCoursesOut.Size = new System.Drawing.Size(366, 38);
@@ -193,7 +204,7 @@
             // 
             // txtNameOut
             // 
-            this.txtNameOut.Location = new System.Drawing.Point(466, 865);
+            this.txtNameOut.Location = new System.Drawing.Point(466, 963);
             this.txtNameOut.Name = "txtNameOut";
             this.txtNameOut.ReadOnly = true;
             this.txtNameOut.Size = new System.Drawing.Size(366, 38);
@@ -201,7 +212,7 @@
             // 
             // txtStartDateOut
             // 
-            this.txtStartDateOut.Location = new System.Drawing.Point(466, 943);
+            this.txtStartDateOut.Location = new System.Drawing.Point(466, 1041);
             this.txtStartDateOut.Name = "txtStartDateOut";
             this.txtStartDateOut.ReadOnly = true;
             this.txtStartDateOut.Size = new System.Drawing.Size(366, 38);
@@ -209,7 +220,7 @@
             // 
             // txtCourseNumOut
             // 
-            this.txtCourseNumOut.Location = new System.Drawing.Point(466, 1027);
+            this.txtCourseNumOut.Location = new System.Drawing.Point(466, 1125);
             this.txtCourseNumOut.Name = "txtCourseNumOut";
             this.txtCourseNumOut.ReadOnly = true;
             this.txtCourseNumOut.Size = new System.Drawing.Size(366, 38);
@@ -217,7 +228,7 @@
             // 
             // txtFormatOut
             // 
-            this.txtFormatOut.Location = new System.Drawing.Point(466, 1106);
+            this.txtFormatOut.Location = new System.Drawing.Point(466, 1204);
             this.txtFormatOut.Name = "txtFormatOut";
             this.txtFormatOut.ReadOnly = true;
             this.txtFormatOut.Size = new System.Drawing.Size(366, 38);
@@ -227,7 +238,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label5.Location = new System.Drawing.Point(104, 795);
+            this.label5.Location = new System.Drawing.Point(104, 893);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(258, 32);
             this.label5.TabIndex = 16;
@@ -237,7 +248,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label6.Location = new System.Drawing.Point(104, 871);
+            this.label6.Location = new System.Drawing.Point(104, 969);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(90, 32);
             this.label6.TabIndex = 17;
@@ -247,7 +258,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label7.Location = new System.Drawing.Point(104, 949);
+            this.label7.Location = new System.Drawing.Point(104, 1047);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(142, 32);
             this.label7.TabIndex = 18;
@@ -257,7 +268,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label8.Location = new System.Drawing.Point(104, 1033);
+            this.label8.Location = new System.Drawing.Point(104, 1131);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(213, 32);
             this.label8.TabIndex = 19;
@@ -267,7 +278,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label9.Location = new System.Drawing.Point(104, 1112);
+            this.label9.Location = new System.Drawing.Point(104, 1210);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(182, 32);
             this.label9.TabIndex = 20;
@@ -293,20 +304,11 @@
             this.tableAdapterManager.CoursesTableAdapter = this.coursesTableAdapter;
             this.tableAdapterManager.UpdateOrder = erin_mcmackin_project4.Class_DBDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // courseNumLabel
-            // 
-            courseNumLabel.AutoSize = true;
-            courseNumLabel.Location = new System.Drawing.Point(104, 395);
-            courseNumLabel.Name = "courseNumLabel";
-            courseNumLabel.Size = new System.Drawing.Size(213, 32);
-            courseNumLabel.TabIndex = 22;
-            courseNumLabel.Text = "Course Number";
-            // 
             // courseNumComboBox
             // 
             this.courseNumComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.coursesBindingSource, "CourseNum", true));
             this.courseNumComboBox.FormattingEnabled = true;
-            this.courseNumComboBox.Location = new System.Drawing.Point(466, 388);
+            this.courseNumComboBox.Location = new System.Drawing.Point(466, 486);
             this.courseNumComboBox.Name = "courseNumComboBox";
             this.courseNumComboBox.Size = new System.Drawing.Size(366, 39);
             this.courseNumComboBox.TabIndex = 23;
@@ -442,7 +444,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(990, 1210);
+            this.ClientSize = new System.Drawing.Size(990, 1357);
             this.Controls.Add(courseNumLabel);
             this.Controls.Add(this.courseNumComboBox);
             this.Controls.Add(this.coursesBindingNavigator);

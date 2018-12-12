@@ -157,9 +157,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(104, 274);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 32);
+            this.label2.Size = new System.Drawing.Size(231, 32);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Name";
+            this.label2.Text = "Name (First Last)";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label3

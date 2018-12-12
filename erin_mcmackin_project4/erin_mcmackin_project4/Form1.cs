@@ -34,17 +34,16 @@ namespace erin_mcmackin_project4
 
         }
 
-        // Create a new new SemesterSet object
+        // when Set button is clicked, pass values from inputs to SemesterSet class
         private void btnSet_Click(object sender, EventArgs e)
         {
-            //newSemester = new SemesterSet(Convert.ToInt32(txtNumOfCoursesIn.Text), txtNameIn.Text, Convert.ToDateTime(calStartDateIn.Text), courseNumComboBox.Text, groupBox1.Text);
-            // MessageBox.Show(txtNameIn.Text);
             SemesterSet.setSemester(Convert.ToInt32(txtNumOfCoursesIn.Text), txtNameIn.Text, Convert.ToDateTime(calStartDateIn.Text), courseNumComboBox.Text, groupBox1.Text);
         }
 
+
+        // when Get button is clicked, pass values from SemesterSet class to SemesterGet class
         private void btnGet_Click(object sender, EventArgs e)
         {
-            //private string txtNumOfCoursesOutNew = SemesterGet.setGetOutputs();
             txtNumOfCoursesOut.Text = Convert.ToString(SemesterGet.GetNumOfCourses);
             txtNameOut.Text = SemesterGet.GetName;
             txtStartDateOut.Text = Convert.ToString(SemesterGet.GetStartDate);

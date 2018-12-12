@@ -8,26 +8,14 @@ namespace erin_mcmackin_project4
 {
     public class SemesterSet
     {
+        // declaring the variables
         private static int NumOfCourses;
         private static string Name;
         private static DateTime StartDate;
         private static string CourseNum;
         private static string ClassFormat;
 
-        //public SemesterSet(int numOfCourses, string name, DateTime startDate, string courseNum, string ClassFormat)
-        //{
-        //     this.NumOfCourses = numOfCourses;
-        //    this.Name = name;
-        //    this.StartDate = startDate;
-        //     this.CourseNum = courseNum;
-        //      this.ClassFormat = ClassFormat;
-        //  }
-
-        //  public static string getNumOfCourses()
-        //  {
-        // return Convert.ToString(SemesterSet.NumOfCourses);
-        //}
-        //
+        // when Set button is clicked, assigning value to SemesterSet class variables
         public static void setSemester(int numOfCourses, string name, DateTime startDate, string courseNum, string classFormat)
         {
             NumOfCourses = numOfCourses;
@@ -36,6 +24,7 @@ namespace erin_mcmackin_project4
             CourseNum = courseNum;
             ClassFormat = classFormat;
 
+            // Passing variable values to SemesterGet class
             SemesterGet.getSemester(NumOfCourses, Name, StartDate, CourseNum, ClassFormat);
         }
     }
